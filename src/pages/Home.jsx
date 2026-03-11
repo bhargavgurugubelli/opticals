@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Shield, Sparkles, ArrowRight, Eye, Glasses, ScanEye, Monitor, Sun, Smile, MapPin, MessageCircle } from 'lucide-react';
-import { services, testimonials, branches, heroPlaceholder, productPlaceholder } from '../data/demoData';
+import { services, testimonials, branches, optoHeroImg, products } from '../data/demoData';
 
 const iconMap = {
     Eye: Eye,
@@ -61,7 +61,7 @@ const Home = () => {
 
                     <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
                         <img
-                            src={heroPlaceholder}
+                            src={optoHeroImg}
                             alt="Professional optometrist checking patient vision"
                             loading="lazy"
                             className="w-full h-full object-cover rounded-2xl md:aspect-[4/5] lg:aspect-square transform hover:scale-105 transition-transform duration-700"
@@ -79,18 +79,18 @@ const Home = () => {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {[1, 2, 3, 4].map((i) => (
-                            <div key={i} className="card bg-white p-6 group hover:shadow-xl transition-all duration-300">
+                        {products.slice(0, 4).map((product) => (
+                            <div key={product.id} className="card bg-white p-6 group hover:shadow-xl transition-all duration-300">
                                 <div className="bg-slate-100 p-8 rounded-xl mb-6 overflow-hidden aspect-square flex items-center justify-center">
                                     <img
-                                        src={productPlaceholder}
-                                        alt="Product showcase"
+                                        src={product.image}
+                                        alt={product.name}
                                         loading="lazy"
                                         className="w-full mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
                                     />
                                 </div>
                                 <div className="text-center">
-                                    <h4 className="text-xl font-bold text-slate-900 mb-2">Premium Frame {i}</h4>
+                                    <h4 className="text-xl font-bold text-slate-900 mb-2">{product.name}</h4>
                                     <p className="text-slate-500 italic">Available in store</p>
                                 </div>
                             </div>

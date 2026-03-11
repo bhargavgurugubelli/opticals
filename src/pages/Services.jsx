@@ -1,4 +1,4 @@
-import { services, servicePlaceholder } from '../data/demoData';
+import { services } from '../data/demoData';
 import { Shield, ArrowRight, Eye, Glasses, ScanEye, Monitor, Sun, Smile, MessageCircle } from 'lucide-react';
 
 const iconMap = {
@@ -34,7 +34,7 @@ const Services = () => {
                                 <div className="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl relative group">
                                     <div className="absolute inset-0 bg-primary-600/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                                     <img
-                                        src={servicePlaceholder}
+                                        src={service.image}
                                         alt={service.title}
                                         loading="lazy"
                                         className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-700"

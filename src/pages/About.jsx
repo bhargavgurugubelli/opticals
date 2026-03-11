@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Shield, Target, Users, Award } from 'lucide-react';
-import { heroPlaceholder } from '../data/demoData';
+import { storeHeroImg } from '../data/demoData';
 
 const About = () => {
     return (
@@ -8,7 +8,7 @@ const About = () => {
             {/* Hero Section */}
             <div className="relative py-24 overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <img src={heroPlaceholder} alt="EyeMax Store" className="w-full h-full object-cover opacity-20" />
+                    <img src={storeHeroImg} alt="EyeMax Store" className="w-full h-full object-cover opacity-20" />
                 </div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <h1 className="text-5xl font-extrabold text-slate-900 mb-6">About EyeMax Optical</h1>

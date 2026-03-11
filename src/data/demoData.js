@@ -1,7 +1,20 @@
-import productPlaceholder from '../assets/images/product-placeholder.svg';
-import heroPlaceholder from '../assets/images/hero-placeholder.svg';
-import servicePlaceholder from '../assets/images/service-placeholder.svg';
+import optoHeroImg from '../assets/images/optometrist_hero_1773248445907.png';
+import storeHeroImg from '../assets/images/store_interior_hero_1773248463974.png';
+import eyeCheckupImg from '../assets/images/service_eye_checkup_1773248480854.png';
+import lensReplacementImg from '../assets/images/service_lens_replacement_1773248497897.png';
+import frameRepairImg from '../assets/images/service_frame_repair_1773248516592.png';
+import computerVisionImg from '../assets/images/service_computer_vision_1773248533880.png';
+import contactLensImg from '../assets/images/service_contact_lens_1773248553198.png';
+import kidsEyewearImg from '../assets/images/service_kids_eyewear_1773248573057.png';
 
+import aviatorImg from '../assets/images/aviator_sunglasses_1773247984413.png';
+import cateyeImg from '../assets/images/cateye_eyeglasses_1773248002844.png';
+import roundImg from '../assets/images/round_eyeglasses_1773248020397.png';
+import sportImg from '../assets/images/sport_sunglasses_1773248037568.png';
+import semiRimlessImg from '../assets/images/semi_rimless_1773248058091.png';
+import kidsImg from '../assets/images/kids_eyeglasses_1773248073676.png';
+import contactLensesImg from '../assets/images/contact_lenses_1773248088333.png';
+import wayfarerImg from '../assets/images/wayfarer_sunglasses_1773248103948.png';
 export const whatsappNumber = "919876543210"; // dummy number 
 
 export const services = [
@@ -11,6 +24,7 @@ export const services = [
         description: 'Comprehensive vision checking with high precision using the latest computerized equipment.',
         icon: 'Eye',
         price: 'Starts at ₹200',
+        image: eyeCheckupImg,
     },
     {
         id: 2,
@@ -18,6 +32,7 @@ export const services = [
         description: 'Update your current frames with new prescription lenses quickly and easily.',
         icon: 'Glasses',
         price: 'Starts at ₹499',
+        image: lensReplacementImg,
     },
     {
         id: 3,
@@ -25,6 +40,7 @@ export const services = [
         description: 'Get your frames adjusted perfectly to fit your face, or repaired quickly.',
         icon: 'ScanEye',
         price: 'Free / Varies',
+        image: frameRepairImg,
     },
     {
         id: 4,
@@ -32,6 +48,7 @@ export const services = [
         description: 'Specialized testing for those experiencing digital eye strain and blue light exposure.',
         icon: 'Monitor',
         price: 'Starts at ₹300',
+        image: computerVisionImg,
     },
     {
         id: 5,
@@ -39,6 +56,7 @@ export const services = [
         description: 'Professional fitting for daily, weekly, or monthly disposable contact lenses.',
         icon: 'Smile',
         price: 'Starts at ₹400',
+        image: contactLensImg,
     },
     {
         id: 6,
@@ -46,18 +64,19 @@ export const services = [
         description: 'Durable, colorful, and flexible frames designed specifically for active children.',
         icon: 'Sun',
         price: 'Starts at ₹599',
+        image: kidsEyewearImg,
     }
 ];
 
 export const products = [
-    { id: 1, name: 'Classic Aviator', category: 'Sunglasses', price: 1299, image: productPlaceholder },
-    { id: 2, name: 'Chic Cat-Eye', category: 'Eyeglasses', price: 950, image: productPlaceholder },
-    { id: 3, name: 'Retro Round', category: 'Eyeglasses', price: 850, image: productPlaceholder },
-    { id: 4, name: 'Sport Wrap', category: 'Sunglasses', price: 1500, image: productPlaceholder },
-    { id: 5, name: 'Elegant Semi-Rimless', category: 'Eyeglasses', price: 1100, image: productPlaceholder },
-    { id: 6, name: 'Kids Flexible Flex', category: 'Kids Frames', price: 600, image: productPlaceholder },
-    { id: 7, name: 'Daily Disposables', category: 'Contact Lenses', price: 400, image: productPlaceholder },
-    { id: 8, name: 'Polarized Wayfarer', category: 'Sunglasses', price: 1800, image: productPlaceholder },
+    { id: 1, name: 'Classic Aviator', category: 'Sunglasses', price: 1299, image: aviatorImg },
+    { id: 2, name: 'Chic Cat-Eye', category: 'Eyeglasses', price: 950, image: cateyeImg },
+    { id: 3, name: 'Retro Round', category: 'Eyeglasses', price: 850, image: roundImg },
+    { id: 4, name: 'Sport Wrap', category: 'Sunglasses', price: 1500, image: sportImg },
+    { id: 5, name: 'Elegant Semi-Rimless', category: 'Eyeglasses', price: 1100, image: semiRimlessImg },
+    { id: 6, name: 'Kids Flexible Flex', category: 'Kids Frames', price: 600, image: kidsImg },
+    { id: 7, name: 'Daily Disposables', category: 'Contact Lenses', price: 400, image: contactLensesImg },
+    { id: 8, name: 'Polarized Wayfarer', category: 'Sunglasses', price: 1800, image: wayfarerImg },
 ];
 
 export const testimonials = [
@@ -109,4 +128,4 @@ export const branches = [
 ];
 
 // Re-export images for components to use
-export { productPlaceholder, heroPlaceholder, servicePlaceholder };
+export { optoHeroImg, storeHeroImg };
