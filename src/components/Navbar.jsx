@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Phone, MapPin, Eye } from 'lucide-react';
+import { Menu, X, Eye } from 'lucide-react';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,16 +16,7 @@ const Navbar = () => {
 
     return (
         <header className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-primary-50">
-            {/* Top bar */}
-            <div className="hidden md:flex justify-between items-center py-2 px-6 bg-primary-600 text-white text-sm">
-                <div className="flex items-center gap-4">
-                    <span className="flex items-center gap-1"><MapPin size={14} /> Srikakulam</span>
-                    <span className="flex items-center gap-1"><Phone size={14} /> +91 98765 43210</span>
-                </div>
-                <div>
-                    Opening Hours: Mon - Sat, 9:00 AM - 8:00 PM
-                </div>
-            </div>
+
 
             {/* Main Nav */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
