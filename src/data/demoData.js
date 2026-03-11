@@ -1,55 +1,63 @@
+import productPlaceholder from '../assets/images/product-placeholder.svg';
+import heroPlaceholder from '../assets/images/hero-placeholder.svg';
+import servicePlaceholder from '../assets/images/service-placeholder.svg';
+
+export const whatsappNumber = "919876543210"; // dummy number 
+
 export const services = [
     {
         id: 1,
-        title: 'Computerized Eye Testing',
-        description: 'State-of-the-art vision checking with high precision.',
+        title: 'Eye Checkup',
+        description: 'Comprehensive vision checking with high precision using the latest computerized equipment.',
         icon: 'Eye',
-        price: 'Free with purchase',
+        price: 'Starts at ₹200',
     },
     {
         id: 2,
-        title: 'Prescription Glasses',
-        description: 'Custom lenses tailored perfectly to your reading and distance needs.',
+        title: 'Lens Replacement',
+        description: 'Update your current frames with new prescription lenses quickly and easily.',
         icon: 'Glasses',
-        price: 'Starting $49',
+        price: 'Starts at ₹499',
     },
     {
         id: 3,
-        title: 'Contact Lenses',
-        description: 'Comfortable daily, weekly, or monthly disposable lenses from top brands.',
+        title: 'Frame Adjustment & Repair',
+        description: 'Get your frames adjusted perfectly to fit your face, or repaired quickly.',
         icon: 'ScanEye',
-        price: 'Starting $30',
+        price: 'Free / Varies',
     },
     {
         id: 4,
-        title: 'Sunglasses Collection',
-        description: 'Stylish UV protection for all ages. Polarized options available.',
-        icon: 'Sun',
-        price: 'Starting $59',
+        title: 'Computer Vision Test',
+        description: 'Specialized testing for those experiencing digital eye strain and blue light exposure.',
+        icon: 'Monitor',
+        price: 'Starts at ₹300',
     },
     {
         id: 5,
-        title: 'Blue Light Protection',
-        description: 'Computer glasses engineered to reduce digital eye strain.',
-        icon: 'Monitor',
-        price: 'Starting $45',
+        title: 'Contact Lens Fitting',
+        description: 'Professional fitting for daily, weekly, or monthly disposable contact lenses.',
+        icon: 'Smile',
+        price: 'Starts at ₹400',
     },
     {
         id: 6,
-        title: 'Kids Eyewear',
-        description: 'Durable, colorful, and flexible frames for active children.',
-        icon: 'Smile',
-        price: 'Starting $39',
+        title: 'Kids Eyewear Specialist',
+        description: 'Durable, colorful, and flexible frames designed specifically for active children.',
+        icon: 'Sun',
+        price: 'Starts at ₹599',
     }
 ];
 
 export const products = [
-    { id: 1, name: 'Classic Aviator', category: 'Men', price: 89, image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&q=80&w=800' },
-    { id: 2, name: 'Chic Cat-Eye', category: 'Women', price: 95, image: 'https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?auto=format&fit=crop&q=80&w=800' },
-    { id: 3, name: 'Retro Round', category: 'Unisex', price: 75, image: 'https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&q=80&w=800' },
-    { id: 4, name: 'Sport Wrap', category: 'Men', price: 110, image: 'https://images.unsplash.com/photo-1628189675276-8806214ed0b2?auto=format&fit=crop&q=80&w=800' },
-    { id: 5, name: 'Elegant Semi-Rimless', category: 'Women', price: 105, image: 'https://images.unsplash.com/photo-1509695507497-903c140c43b0?auto=format&fit=crop&q=80&w=800' },
-    { id: 6, name: 'Kids Flexible Flex', category: 'Kids', price: 55, image: 'https://images.unsplash.com/photo-1589330105307-e435964f40f0?auto=format&fit=crop&q=80&w=800' },
+    { id: 1, name: 'Classic Aviator', category: 'Sunglasses', price: 1299, image: productPlaceholder },
+    { id: 2, name: 'Chic Cat-Eye', category: 'Eyeglasses', price: 950, image: productPlaceholder },
+    { id: 3, name: 'Retro Round', category: 'Eyeglasses', price: 850, image: productPlaceholder },
+    { id: 4, name: 'Sport Wrap', category: 'Sunglasses', price: 1500, image: productPlaceholder },
+    { id: 5, name: 'Elegant Semi-Rimless', category: 'Eyeglasses', price: 1100, image: productPlaceholder },
+    { id: 6, name: 'Kids Flexible Flex', category: 'Kids Frames', price: 600, image: productPlaceholder },
+    { id: 7, name: 'Daily Disposables', category: 'Contact Lenses', price: 400, image: productPlaceholder },
+    { id: 8, name: 'Polarized Wayfarer', category: 'Sunglasses', price: 1800, image: productPlaceholder },
 ];
 
 export const testimonials = [
@@ -57,7 +65,7 @@ export const testimonials = [
         id: 1,
         name: 'Sarah Jenkins',
         rating: 5,
-        text: 'Amazing experience! The eye test was quick and accurate, and I loved the huge selection of frames.',
+        text: 'Great collection of frames and friendly service. Highly recommend the Srikakulam main branch!',
     },
     {
         id: 2,
@@ -69,6 +77,36 @@ export const testimonials = [
         id: 3,
         name: 'Emily Chen',
         rating: 4,
-        text: 'Great quality lenses and super fast delivery on my custom prescription. Will definitely return!',
+        text: 'Excellent eye checkup and super fast delivery on my custom prescription glasses.',
     },
 ];
+
+export const branches = [
+    {
+        id: 1,
+        name: 'Srikakulam Main Branch',
+        address: '123 Main Road, Srikakulam CBD, Andhra Pradesh 532001',
+        phone: '+91 98765 43210',
+        whatsappMessage: 'Hello Srikakulam Main Branch, I want to inquire about...',
+        mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15190.495031206198!2d83.89966145!3d18.2988118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c130000000001%3A0x0!2sSrikakulam!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin'
+    },
+    {
+        id: 2,
+        name: 'Srikakulam City Center Branch',
+        address: 'Level 2, City Center Mall, Srikakulam, Andhra Pradesh 532001',
+        phone: '+91 98765 43211',
+        whatsappMessage: 'Hello Srikakulam City Center Branch, I want to inquire about...',
+        mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15190.495031206198!2d83.89966145!3d18.2988118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c130000000001%3A0x0!2sSrikakulam!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin'
+    },
+    {
+        id: 3,
+        name: 'Rajam Branch',
+        address: '45 Bazar Street, Rajam, Andhra Pradesh 532127',
+        phone: '+91 98765 43212',
+        whatsappMessage: 'Hello Rajam Branch, I want to inquire about...',
+        mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60741.53032120302!2d83.7431359!3d18.4419973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c631eaf000001%3A0x1d4bcdcb2f7aab59!2sRajam!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin'
+    }
+];
+
+// Re-export images for components to use
+export { productPlaceholder, heroPlaceholder, servicePlaceholder };

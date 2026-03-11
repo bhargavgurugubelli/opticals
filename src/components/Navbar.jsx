@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, Phone, MapPin, Eye } from 'lucide-react';
 
@@ -7,8 +7,10 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Services', path: '/services' },
         { name: 'Products', path: '/products' },
+        { name: 'Services', path: '/services' },
+        { name: 'Branches', path: '/branches' },
+        { name: 'About', path: '/about' },
         { name: 'Contact', path: '/contact' },
     ];
 
@@ -17,8 +19,8 @@ const Navbar = () => {
             {/* Top bar */}
             <div className="hidden md:flex justify-between items-center py-2 px-6 bg-primary-600 text-white text-sm">
                 <div className="flex items-center gap-4">
-                    <span className="flex items-center gap-1"><MapPin size={14} /> Main Road, Your City</span>
-                    <span className="flex items-center gap-1"><Phone size={14} /> +91 91234 56789</span>
+                    <span className="flex items-center gap-1"><MapPin size={14} /> Srikakulam</span>
+                    <span className="flex items-center gap-1"><Phone size={14} /> +91 98765 43210</span>
                 </div>
                 <div>
                     Opening Hours: Mon - Sat, 9:00 AM - 8:00 PM
@@ -49,7 +51,7 @@ const Navbar = () => {
                             </NavLink>
                         ))}
                         <Link to="/appointment" className="btn-primary py-2.5 px-5">
-                            Book Eye Test
+                            Book Appointment
                         </Link>
                     </nav>
 
@@ -83,7 +85,7 @@ const Navbar = () => {
                         ))}
                         <div className="mt-4 px-3 pb-3">
                             <Link to="/appointment" onClick={() => setIsOpen(false)} className="btn-primary w-full justify-center">
-                                Book Eye Test
+                                Book Appointment
                             </Link>
                         </div>
                     </div>

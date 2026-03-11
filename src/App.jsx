@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
@@ -6,6 +5,8 @@ import Services from './pages/Services';
 import Products from './pages/Products';
 import Appointment from './pages/Appointment';
 import Contact from './pages/Contact';
+import Branches from './pages/Branches';
+import About from './pages/About';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="products" element={<Products />} />
           <Route path="appointment" element={<Appointment />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="branches" element={<Branches />} />
+          <Route path="about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

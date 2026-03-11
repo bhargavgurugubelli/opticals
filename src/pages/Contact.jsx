@@ -1,5 +1,4 @@
-import React from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -9,8 +8,8 @@ const Contact = () => {
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h1 className="text-sm font-bold text-primary-600 uppercase tracking-wide">Get in touch</h1>
-                    <h2 className="mt-2 text-4xl font-extrabold text-slate-900">We'd Love to Hear From You</h2>
-                    <p className="mt-4 text-slate-600 text-lg">Whether you have a question about our services, products, or your prescription, our team is ready to answer all your questions.</p>
+                    <h2 className="mt-2 text-4xl font-extrabold text-slate-900">We&apos;d Love to Hear From You</h2>
+                    <p className="mt-4 text-slate-600 text-lg">Whether you have a question about our services, products, or your prescription, our team is ready to answer all your questions via WhatsApp.</p>
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12">
@@ -19,9 +18,6 @@ const Contact = () => {
                     <div className="space-y-10 bg-white p-12 rounded-3xl shadow-soft">
                         <div>
                             <h3 className="text-3xl font-bold text-slate-900 mb-8">Contact Information</h3>
-                            <p className="text-slate-600 mb-8 max-w-sm">
-                                Fill out the form and our team will get back to you within 24 hours.
-                            </p>
                         </div>
 
                         <div className="space-y-6">
@@ -31,8 +27,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-slate-900 text-lg">Phone & WhatsApp</h4>
-                                    <p className="text-slate-600 mt-1">+91 91234 56789</p>
-                                    <a href="https://wa.me/919123456789" className="text-sm text-green-600 font-bold hover:underline mt-1 inline-block">Message on WhatsApp &rarr;</a>
+                                    <p className="text-slate-600 mt-1">+91 98765 43210</p>
+                                    <a href="https://wa.me/919876543210?text=Hello%20EyeMax!" className="text-sm text-green-600 font-bold hover:underline mt-1 inline-block">Message on WhatsApp &rarr;</a>
                                 </div>
                             </div>
 
@@ -42,8 +38,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-slate-900 text-lg">Email Address</h4>
-                                    <p className="text-slate-600 mt-1">info@eyemaxopticals.com</p>
-                                    <p className="text-slate-600">support@eyemaxopticals.com</p>
+                                    <p className="text-slate-600 mt-1">support@eyemaxopticals.com</p>
                                 </div>
                             </div>
 
@@ -52,10 +47,10 @@ const Contact = () => {
                                     <MapPin size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-900 text-lg">Store Location</h4>
+                                    <h4 className="font-bold text-slate-900 text-lg">Main Store Location</h4>
                                     <p className="text-slate-600 mt-1 leading-relaxed">
-                                        123 Main Road, City Center<br />
-                                        Near Metro Station, Your City 40001
+                                        123 Main Road, Srikakulam CBD<br />
+                                        Andhra Pradesh 532001
                                     </p>
                                 </div>
                             </div>
@@ -73,41 +68,22 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Quick Contact Form */}
-                    <div className="bg-white p-12 rounded-3xl shadow-soft">
-                        <h3 className="text-3xl font-bold text-slate-900 mb-8">Send us a Message</h3>
+                    {/* Quick Contact Form Replacement */}
+                    <div className="bg-gradient-to-br from-green-500 to-green-600 p-12 rounded-3xl shadow-soft text-white flex flex-col items-center justify-center text-center">
+                        <MessageCircle size={80} className="mb-8 opacity-80" />
+                        <h3 className="text-3xl font-bold mb-6">Fastest Way to Reach Us</h3>
+                        <p className="text-green-50 text-xl font-medium mb-12">
+                            Skip the emails and forms. Chat directly with our experts on WhatsApp to get instant answers.
+                        </p>
 
-                        <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Message Sent Successfully!"); e.target.reset(); }}>
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <label className="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
-                                    <input type="text" className="input-field" placeholder="John" required />
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
-                                    <input type="text" className="input-field" placeholder="Doe" required />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-semibold text-slate-700 mb-2">Email</label>
-                                <input type="email" className="input-field" placeholder="john@example.com" required />
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-semibold text-slate-700 mb-2">Subject</label>
-                                <input type="text" className="input-field" placeholder="How can we help?" required />
-                            </div>
-
-                            <div>
-                                <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
-                                <textarea rows="5" className="input-field resize-none" placeholder="Write your message here..." required></textarea>
-                            </div>
-
-                            <button type="submit" className="w-full btn-primary py-4 text-lg">
-                                <Send size={20} className="mr-2" /> Send Message
-                            </button>
-                        </form>
+                        <a
+                            href="https://wa.me/919876543210?text=Hello%20EyeMax,%20I%20have%20an%20inquiry."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white text-green-600 hover:scale-105 shadow-xl transition-all duration-300 w-full py-5 text-xl rounded-2xl font-bold flex justify-center items-center gap-2"
+                        >
+                            <MessageCircle size={24} /> Chat Now
+                        </a>
                     </div>
 
                 </div>
@@ -115,7 +91,7 @@ const Contact = () => {
                 {/* Full width Map Embed */}
                 <div className="mt-12 rounded-3xl overflow-hidden shadow-soft h-[400px] border-4 border-white">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.016335198424!2d72.8364273!3d19.106969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzI1LjEiTiA3MsKwNTAnMTEuMSJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15190.495031206198!2d83.89966145!3d18.2988118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c130000000001%3A0x0!2sSrikakulam!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
