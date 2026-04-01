@@ -57,23 +57,35 @@
   @apply absolute rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse;
 }
 
+:root {
+  --marquee-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --marquee-gap: 2rem;
+  }
+}
+
 .marquee-container {
-  @apply flex overflow-hidden select-none gap-8;
+  @apply flex overflow-hidden select-none;
+  gap: var(--marquee-gap);
 }
 
 .marquee-content {
-  @apply flex min-w-full shrink-0 items-center justify-around gap-8 animate-marquee;
+  @apply flex shrink-0 items-center justify-start anim-marquee;
+  gap: var(--marquee-gap);
 }
 
 @keyframes marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(calc(-100% - 2rem)); }
+  to { transform: translateX(calc(-100% - var(--marquee-gap))); }
 }
 
-.animate-marquee {
+.anim-marquee {
   animation: marquee 40s linear infinite;
 }
 
-.pause-on-hover:hover .animate-marquee {
+.pause-on-hover:hover .anim-marquee {
   animation-play-state: paused;
 }

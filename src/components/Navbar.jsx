@@ -19,10 +19,10 @@ const Navbar = () => {
         <header className="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
             {/* Main Nav */}
             <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
-                <div className="flex justify-between h-28 items-center">
+                <div className="flex justify-between h-20 items-center">
                     <Link to="/" className="flex items-center group">
-                        <div className="overflow-hidden rounded-2xl bg-white shadow-sm p-1 transition-all duration-500 group-hover:shadow-md border border-slate-100">
-                            <img src="/assets/images/logo.jpg" alt="EyeMax" className="h-14 md:h-20 w-auto transition-transform duration-700 group-hover:scale-105" />
+                        <div className="transition-all duration-500">
+                            <img src="/assets/images/logo.jpg" alt="EyeMax" className="h-12 md:h-16 w-auto transition-transform duration-700 group-hover:scale-110" />
                         </div>
                     </Link>
 
