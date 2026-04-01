@@ -103,26 +103,26 @@ export const testimonials = [
 export const branches = [
     {
         id: 1,
-        name: 'Srikakulam Main Branch',
-        address: '123 Main Road, Srikakulam CBD, Andhra Pradesh 532001',
-        phone: '+91 98765 43210',
-        whatsappMessage: 'Hello Srikakulam Main Branch, I want to inquire about...',
-        mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15190.495031206198!2d83.89966145!3d18.2988118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c130000000001%3A0x0!2sSrikakulam!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin'
+        name: 'EyeMax - Srikakulam',
+        address: 'Krishnapark Junction, Srikakulam, Andhra Pradesh 532001',
+        phone: '+91 94943 03030', // updated with a more realistic placeholder or keeping placeholder
+        whatsappMessage: 'Hello EyeMax Srikakulam, I want to inquire about...',
+        mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.645031206198!2d83.89566145!3d18.2988118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c14fb230d7b7b%3A0xc3b8a36ef0627e7f!2sKrishna%20Park%20Junction!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin'
     },
     {
         id: 2,
-        name: 'Srikakulam City Center Branch',
-        address: 'Level 2, City Center Mall, Srikakulam, Andhra Pradesh 532001',
-        phone: '+91 98765 43211',
-        whatsappMessage: 'Hello Srikakulam City Center Branch, I want to inquire about...',
-        mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15190.495031206198!2d83.89966145!3d18.2988118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c130000000001%3A0x0!2sSrikakulam!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin'
+        name: 'LensHut - Srikakulam',
+        address: 'Day and Night Junction, Beside Varam Residency, Srikakulam, Andhra Pradesh 532001',
+        phone: '+91 94943 03030',
+        whatsappMessage: 'Hello LensHut Srikakulam, I want to inquire about...',
+        mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.645031206198!2d83.89966145!3d18.2988118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c139c87847b31%3A0x600c3b0dfada8d92!2sDay%20%26%20Night%20Junction%20Srikakulam!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin'
     },
     {
         id: 3,
-        name: 'Rajam Branch',
-        address: '45 Bazar Street, Rajam, Andhra Pradesh 532127',
-        phone: '+91 98765 43212',
-        whatsappMessage: 'Hello Rajam Branch, I want to inquire about...',
+        name: 'EyeMax - Rajam',
+        address: 'Palakonda Road, Opp CMR Shopping Mall, Rajam, Andhra Pradesh 532127',
+        phone: '+91 94943 03030',
+        whatsappMessage: 'Hello EyeMax Rajam, I want to inquire about...',
         mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60741.53032120302!2d83.7431359!3d18.4419973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c631eaf000001%3A0x1d4bcdcb2f7aab59!2sRajam!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin'
     }
 ];

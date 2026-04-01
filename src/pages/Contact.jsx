@@ -49,7 +49,7 @@ const Contact = () => {
                                 <div>
                                     <h4 className="font-bold text-slate-900 text-lg">Main Store Location</h4>
                                     <p className="text-slate-600 mt-1 leading-relaxed">
-                                        123 Main Road, Srikakulam CBD<br />
+                                        Krishnapark Junction, Srikakulam<br />
                                         Andhra Pradesh 532001
                                     </p>
                                 </div>
@@ -89,9 +89,9 @@ const Contact = () => {
                 </div>
 
                 {/* Full width Map Embed */}
-                <div className="mt-12 rounded-3xl overflow-hidden shadow-soft h-[400px] border-4 border-white">
+    <div className="mt-12 rounded-3xl overflow-hidden shadow-soft h-[400px] border-4 border-white">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15190.495031206198!2d83.89966145!3d18.2988118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c130000000001%3A0x0!2sSrikakulam!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15190.495031206198!2d83.89566145!3d18.2988118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c14fb230d7b7b%3A0xc3b8a36ef0627e7f!2sKrishna%20Park%20Junction!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}

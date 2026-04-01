@@ -1,93 +1,51 @@
 import { useEffect } from 'react';
-import { ShieldCheck, ArrowRight, Eye } from 'lucide-react';
+import { ShieldCheck, ArrowRight, Eye, MessageCircle } from 'lucide-react';
 import { brands } from '../data/brandsData';
-import { whatsappNumber } from '../data/demoData';
 
 const Brands = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hello Eye Max Opticals, I want to book an eye test appointment or inquire about your brands.")}`;
-
     return (
-        <div className="pt-20">
+        <div className="pt-24 bg-slate-50 min-h-screen font-sans">
             {/* Hero Section */}
-            <section className="bg-primary-50 py-16 md:py-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-display">
-                        Trusted Eyewear Brands
-                    </h1>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                        Eye Max Opticals offers high-quality frames and lenses from trusted global eyewear brands.
+            <section className="relative py-32 overflow-hidden bg-white">
+                <div className="blur-blob w-[600px] h-[600px] bg-primary-100/50 top-[-20%] left-[-10%] z-0 text-white"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <h1 className="text-sm font-black text-primary-600 uppercase tracking-[0.4em] mb-6">Partners in Vision</h1>
+                    <h2 className="text-6xl font-black text-slate-900 mb-10 heading-display leading-tight">Global Labels. <br />Elite Standards.</h2>
+                    <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed italic">
+                        EyeMax Opticals curate authentic collections from the world&apos;s most prestigious eyewear designers.
                     </p>
-                </div>
-            </section>
-
-            {/* SEO Content Section */}
-            <section className="py-12 bg-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-2xl font-bold text-slate-800 mb-4 font-display">
-                        Eyewear Brands Available at Eye Max Opticals
-                    </h2>
-                    <p className="text-slate-600 text-lg leading-relaxed">
-                        Eye Max Opticals offers eyewear from trusted brands like Ray-Ban, Fastrack, Vogue, Titan and Essilor lenses. Visit our store in Srikakulam or Rajam to explore the latest collections.
-                    </p>
-                </div>
-            </section>
-
-            {/* Essilor Expert Highlight Section */}
-            <section className="py-6 pb-12 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-blue-100/50 flex flex-col md:flex-row items-center gap-8 justify-between">
-                        <div className="flex-1 space-y-4 text-center md:text-left">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-2">
-                                <ShieldCheck size={18} />
-                                <span>Premium Partner</span>
-                            </div>
-                            <h2 className="text-3xl font-bold text-slate-900 font-display">
-                                Authorized Essilor Expert Store
-                            </h2>
-                            <p className="text-lg text-slate-700">
-                                Eye Max Opticals is an Essilor Expert partner providing premium Essilor lenses for better vision and eye care.
-                            </p>
-                        </div>
-                        <div className="w-full md:w-auto flex justify-center bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                            {/* Text based logo representation */}
-                            <div className="text-2xl font-bold text-blue-900 tracking-wider">
-                                <span className="text-blue-600">Essilor</span> Expert
-                            </div>
-                            <img src="" alt="Essilor Expert Partner at Eye Max Opticals" className="hidden" />
-                        </div>
-                    </div>
                 </div>
             </section>
 
             {/* Brands Grid Section */}
-            <section className="py-16 bg-slate-50">
+            <section className="py-24 relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                         {brands.map((brand) => (
                             <div 
                                 key={brand.id}
-                                className="bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col items-center text-center group"
+                                className="card-premium p-12 flex flex-col items-center text-center group bg-white border border-slate-100 hover:-translate-y-2 transition-all duration-500"
                             >
-                                <div className="h-24 w-full flex items-center justify-center mb-6">
+                                <div className="h-28 w-full flex items-center justify-center mb-10">
                                     {brand.logo ? (
                                         <img 
                                             src={brand.logo} 
-                                            alt={`${brand.name} eyewear available at Eye Max Opticals Srikakulam`} 
-                                            className="max-h-full max-w-[80%] object-contain"
+                                            alt={brand.name} 
+                                            className="max-h-full max-w-[90%] object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
                                         />
                                     ) : (
-                                        <span className="text-3xl font-bold text-slate-300 group-hover:text-primary-600 transition-colors uppercase tracking-widest font-display">
+                                        <span className="text-4xl font-extrabold text-slate-300 group-hover:text-primary-600 transition-colors uppercase tracking-[0.2em] heading-display">
                                             {brand.name}
                                         </span>
                                     )}
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-800 mb-3">{brand.name}</h3>
-                                <p className="text-slate-600">
-                                    {brand.description}
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4 heading-display">{brand.name}</h3>
+                                <p className="text-slate-500 font-medium leading-relaxed italic">
+                                    &quot;{brand.description || "Unparalleled quality and timeless design since inception."}&quot;
                                 </p>
                             </div>
                         ))}
@@ -95,27 +53,53 @@ const Brands = () => {
                 </div>
             </section>
 
-            {/* Call to Action Section */}
-            <section className="py-20 bg-primary-600 text-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-                    <h2 className="text-3xl md:text-5xl font-bold font-display">
-                        Visit Our Store to Explore More Brands
-                    </h2>
-                    <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-                        Discover the latest eyewear collections at Eye Max Opticals.
-                    </p>
-                    <div className="pt-4">
-                        <a 
-                            href={whatsappLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-white text-primary-600 hover:bg-slate-50 font-semibold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2"
-                        >
-                            <Eye size={24} />
-                            Book Eye Test Appointment
-                            <ArrowRight size={20} className="ml-1" />
-                        </a>
+            {/* Special Highlight */}
+            <section className="py-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="glass-card p-16 rounded-[4rem] bg-gradient-to-br from-indigo-900 to-slate-950 text-white relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                        <div className="relative z-10 grid md:grid-cols-2 gap-16 items-center">
+                            <div className="space-y-8">
+                                <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-primary-500/20 backdrop-blur-md border border-primary-500/30 text-primary-400 text-[10px] font-black uppercase tracking-[0.2em]">
+                                    <ShieldCheck size={16} /> Premium Partner
+                                </div>
+                                <h2 className="text-5xl font-black heading-display leading-tight">
+                                    Authorized <br /><span className="text-primary-500">Essilor Expert</span> Boutique
+                                </h2>
+                                <p className="text-xl text-slate-400 leading-relaxed max-w-md">
+                                    As official Essilor Expert partners, we provide cutting-edge lens technology integrated with professional diagnostics.
+                                </p>
+                            </div>
+                            <div className="bg-white/5 backdrop-blur-xl p-16 rounded-[3rem] border border-white/10 flex flex-col items-center group-hover:bg-white/10 transition-colors">
+                                <div className="text-4xl font-black text-white tracking-[0.3em] uppercase heading-display flex flex-col items-center gap-4 text-center">
+                                    <span className="text-primary-500 leading-tight">ESSILOR</span>
+                                    <span className="text-xl tracking-[0.5em] text-slate-400 font-extralight leading-none">EXPERT</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Call to Action Section */}
+            <section className="py-32 bg-slate-50">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-16 rounded-[3rem] shadow-soft border border-slate-100">
+                    <h2 className="text-4xl lg:text-6xl font-black text-slate-900 heading-display mb-10 leading-tight">
+                        Experience the <br /><span className="text-gradient">Whole Collection.</span>
+                    </h2>
+                    <p className="text-xl text-slate-500 mb-12 italic">
+                        Visit our boutiques to try on the world&apos;s leading eyewear styles in person.
+                    </p>
+                    <a 
+                        href={`https://wa.me/919494303030?text=Hello%20EyeMax,%20I%20want%20to%20inquire%20about%20your%20luxury%20brands.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary inline-flex scale-110"
+                    >
+                        <MessageCircle size={24} className="mr-3" />
+                        Inquire via Concierge
+                        <ArrowRight size={24} className="ml-3" />
+                    </a>
                 </div>
             </section>
         </div>

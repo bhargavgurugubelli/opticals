@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Eye } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,42 +16,44 @@ const Navbar = () => {
     ];
 
     return (
-        <header className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-primary-50">
-
-
+        <header className="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
             {/* Main Nav */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-20 items-center">
-                    <Link to="/" className="flex items-center gap-2">
-                        <div className="bg-primary-50 p-2 rounded-xl text-primary-600">
-                            <Eye size={28} />
+            <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
+                <div className="flex justify-between h-28 items-center">
+                    <Link to="/" className="flex items-center group">
+                        <div className="overflow-hidden rounded-2xl bg-white shadow-sm p-1 transition-all duration-500 group-hover:shadow-md border border-slate-100">
+                            <img src="/assets/images/logo.jpg" alt="EyeMax" className="h-14 md:h-20 w-auto transition-transform duration-700 group-hover:scale-105" />
                         </div>
-                        <span className="text-2xl font-bold bg-gradient-to-r from-primary-800 to-primary-500 bg-clip-text text-transparent">EyeMax</span>
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center space-x-8">
+                    <nav className="hidden xl:flex items-center space-x-12">
                         {navLinks.map((link) => (
                             <NavLink
                                 key={link.name}
                                 to={link.path}
                                 className={({ isActive }) =>
-                                    `text-base font-medium transition-colors hover:text-primary-600 ${isActive ? 'text-primary-600' : 'text-slate-600'}`
+                                    `text-[13px] font-black tracking-[0.1em] uppercase transition-all duration-300 hover:text-primary-600 relative group/link ${isActive ? 'text-primary-600' : 'text-slate-500'}`
                                 }
                             >
-                                {link.name}
+                                {({ isActive }) => (
+                                    <>
+                                        {link.name}
+                                        <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-1 bg-primary-600 transition-all duration-300 rounded-full ${isActive ? 'w-4' : 'w-0 group-hover/link:w-4'}`}></span>
+                                    </>
+                                )}
                             </NavLink>
                         ))}
-                        <Link to="/appointment" className="btn-primary py-2.5 px-5">
+                        <Link to="/appointment" className="btn-primary py-3 px-8 text-xs uppercase tracking-widest">
                             Book Appointment
                         </Link>
                     </nav>
 
                     {/* Mobile menu button */}
-                    <div className="md:hidden flex items-center">
+                    <div className="xl:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-slate-600 hover:text-primary-600 focus:outline-none"
+                            className="p-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 rounded-2xl transition-all"
                         >
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
@@ -61,7 +63,7 @@ const Navbar = () => {
 
             {/* Mobile nav */}
             {isOpen && (
-                <div className="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full pb-4">
+                <div className="xl:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full pb-4">
                     <div className="px-4 pt-2 space-y-1">
                         {navLinks.map((link) => (
                             <NavLink
