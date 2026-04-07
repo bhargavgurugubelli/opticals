@@ -8,10 +8,13 @@ import Contact from './pages/Contact';
 import Branches from './pages/Branches';
 import About from './pages/About';
 import Brands from './pages/Brands';
+import SplashScreen from './components/common/SplashScreen';
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
+      <SplashScreen />
+      <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
@@ -25,6 +28,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 

@@ -9,22 +9,22 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply text-slate-800 antialiased bg-slate-50 font-sans;
+    @apply text-slate-100 antialiased bg-dark-500 font-sans;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-2xl text-white bg-primary-600 hover:bg-primary-700 hover:shadow-2xl hover:shadow-primary-300 hover:-translate-y-1 transition-all duration-300 active:scale-95 cursor-pointer;
+    @apply inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-2xl text-white bg-primary-600 hover:bg-primary-500 hover:shadow-[0_0_30px_rgba(225,29,72,0.4)] hover:-translate-y-1 transition-all duration-300 active:scale-95 cursor-pointer;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-slate-200 text-base font-bold rounded-2xl text-slate-700 bg-white hover:bg-slate-50 hover:border-primary-200 transition-all duration-300 active:scale-95 cursor-pointer;
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-slate-800 text-base font-bold rounded-2xl text-slate-200 bg-white/5 hover:bg-white/10 hover:border-primary-500 transition-all duration-300 active:scale-95 cursor-pointer;
   }
   .card-premium {
-    @apply bg-white rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(14,165,233,0.1)] hover:-translate-y-2 transition-all duration-500 overflow-hidden;
+    @apply bg-white/[0.03] backdrop-blur-3xl rounded-3xl border border-white/10 shadow-2xl hover:shadow-[0_20px_50px_rgba(225,29,72,0.15)] hover:border-primary-500/30 hover:-translate-y-2 transition-all duration-500 overflow-hidden;
   }
   .glass-card {
-    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-xl;
+    @apply bg-black/40 backdrop-blur-2xl border border-white/5 shadow-2xl;
   }
   .heading-display {
     @apply font-display tracking-tight leading-[1.1];
@@ -36,11 +36,11 @@
 }
 
 .hero-refined-gradient {
-  background: radial-gradient(circle at top right, #f0f9ff 0%, #ffffff 50%, #f1f5f9 100%);
+  background: radial-gradient(circle at top right, #330000 0%, #000000 50%, #050505 100%);
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-indigo-600;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-rose-600;
 }
 
 .animate-float {
@@ -88,4 +88,88 @@
 
 .pause-on-hover:hover .anim-marquee {
   animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E11D48;
+}
+
+/* 3D Effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.hover-3d:hover {
+  transform: rotateY(10deg) rotateX(10deg);
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+@keyframes draw {
+  0% { stroke-dashoffset: 200; opacity: 0; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes draw {
+  0% { stroke-dashoffset: 200; opacity: 0; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes reveal {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.2; }
+  100% { transform: scale(0.8); opacity: 0.5; }
+}
+
+.anim-draw {
+  stroke-dasharray: 200;
+  animation: draw 2s ease-in-out infinite;
+}
+
+.anim-reveal {
+  animation: reveal 1s ease-out forwards;
+}
+
+.anim-pulse-ring {
+  animation: pulse-ring 3s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

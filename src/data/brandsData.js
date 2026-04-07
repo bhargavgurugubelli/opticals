@@ -8,31 +8,31 @@ export const brands = [
     {
         id: 1,
         name: 'Ray-Ban',
-        description: 'Classic premium eyewear brand known worldwide.',
+        description: 'World famous premium brand for stylish glasses.',
         logo: image1
     },
     {
         id: 2,
         name: 'Fastrack',
-        description: 'Stylish and trendy frames for everyday wear.',
+        description: 'Cool and trendy frames for young people.',
         logo: image2
     },
     {
         id: 3,
         name: 'Vogue',
-        description: 'Fashion-forward eyewear for the modern trendsetter.',
+        description: 'Latest high-fashion glasses for the modern look.',
         logo: image3
     },
     {
         id: 4,
         name: 'Titan',
-        description: 'Reliable, high-quality frames with elegant designs.',
+        description: 'Strong, high-quality frames with beautiful designs.',
         logo: image4
     },
     {
         id: 5,
         name: 'Polaroid',
-        description: 'Pioneers of polarized lenses for ultimate UV protection.',
+        description: 'Best polarized lenses to protect your eyes from sun.',
         logo: image5
     }
 ];

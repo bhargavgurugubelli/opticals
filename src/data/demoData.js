@@ -1,5 +1,6 @@
 import optoHeroImg from '../assets/images/optometrist_hero_1773248445907.png';
 import storeHeroImg from '../assets/images/store_interior_hero_1773248463974.png';
+import fashionHeroImg from '../assets/images/fashion_hero_eyewear.png';
 import eyeCheckupImg from '../assets/images/service_eye_checkup_1773248480854.png';
 import lensReplacementImg from '../assets/images/service_lens_replacement_1773248497897.png';
 import frameRepairImg from '../assets/images/service_frame_repair_1773248516592.png';
@@ -15,13 +16,13 @@ import semiRimlessImg from '../assets/images/semi_rimless_1773248058091.png';
 import kidsImg from '../assets/images/kids_eyeglasses_1773248073676.png';
 import contactLensesImg from '../assets/images/contact_lenses_1773248088333.png';
 import wayfarerImg from '../assets/images/wayfarer_sunglasses_1773248103948.png';
-export const whatsappNumber = "919876543210"; // dummy number 
+export const whatsappNumber = "919494303030";
 
 export const services = [
     {
         id: 1,
         title: 'Eye Checkup',
-        description: 'Comprehensive vision checking with high precision using the latest computerized equipment.',
+        description: 'Complete eye testing with the latest computer machines for perfect vision.',
         icon: 'Eye',
         price: 'Starts at ₹200',
         image: eyeCheckupImg,
@@ -29,39 +30,39 @@ export const services = [
     {
         id: 2,
         title: 'Lens Replacement',
-        description: 'Update your current frames with new prescription lenses quickly and easily.',
+        description: 'Change your old lenses with new ones in just 10 minutes with expert care.',
         icon: 'Glasses',
         price: 'Starts at ₹499',
         image: lensReplacementImg,
     },
     {
         id: 3,
-        title: 'Frame Adjustment & Repair',
-        description: 'Get your frames adjusted perfectly to fit your face, or repaired quickly.',
+        title: 'Frame Setting & Repair',
+        description: 'Free frame setting and quick repairs to make your glasses feel like new.',
         icon: 'ScanEye',
         price: 'Free / Varies',
         image: frameRepairImg,
     },
     {
         id: 4,
-        title: 'Computer Vision Test',
-        description: 'Specialized testing for those experiencing digital eye strain and blue light exposure.',
+        title: 'Computer Glasses',
+        description: 'Best blue-cut glasses for mobile and computer users to reduce eye strain.',
         icon: 'Monitor',
         price: 'Starts at ₹300',
         image: computerVisionImg,
     },
     {
         id: 5,
-        title: 'Contact Lens Fitting',
-        description: 'Professional fitting for daily, weekly, or monthly disposable contact lenses.',
+        title: 'Contact Lenses',
+        description: 'Get the perfect and comfortable contact lenses for your eyes.',
         icon: 'Smile',
         price: 'Starts at ₹400',
         image: contactLensImg,
     },
     {
         id: 6,
-        title: 'Kids Eyewear Specialist',
-        description: 'Durable, colorful, and flexible frames designed specifically for active children.',
+        title: 'Kids Specialists',
+        description: 'Strong, colorful and flexible glasses specially made for your kids.',
         icon: 'Sun',
         price: 'Starts at ₹599',
         image: kidsEyewearImg,
@@ -82,21 +83,33 @@ export const products = [
 export const testimonials = [
     {
         id: 1,
-        name: 'Sarah Jenkins',
+        name: 'Ravi Teja Rao',
         rating: 5,
-        text: 'Great collection of frames and friendly service. Highly recommend the Srikakulam main branch!',
+        text: 'Excellent collection of frames! The service at EyeMax Srikakulam main branch is very professional. Highly recommend.',
     },
     {
         id: 2,
-        name: 'David Patel',
+        name: 'Anjali Varma',
         rating: 5,
-        text: 'Very professional staff. Helped me pick the perfect computer glasses that have eliminated my headaches.',
+        text: 'Best optical shop in Rajam. The frame designs are modern and the staff is very helpful in picking the right ones.',
     },
     {
         id: 3,
-        name: 'Emily Chen',
-        rating: 4,
-        text: 'Excellent eye checkup and super fast delivery on my custom prescription glasses.',
+        name: 'Suresh Kumar',
+        rating: 5,
+        text: 'The eye testing was very precise. I got my progressive lenses delivered within 2 days. Truly a premium experience.',
+    },
+    {
+        id: 4,
+        name: 'Priya Madhavi',
+        rating: 5,
+        text: 'Chala bagundi collections! The blue-cut computer glasses have really reduced my eye strain. Staff is very friendly.',
+    },
+    {
+        id: 5,
+        name: 'Murali Krishna',
+        rating: 5,
+        text: 'Honest pricing and high-quality lenses. I have been a loyal customer for 5 years now across their Srikakulam branches.',
     },
 ];
 
@@ -127,5 +140,65 @@ export const branches = [
     }
 ];
 
+export const lensTypes = [
+    {
+        id: 1,
+        name: 'Single Vision Lenses',
+        description: 'Perfect for either distance vision or reading.',
+    },
+    {
+        id: 2,
+        name: 'Bifocal Lenses',
+        description: 'Classic lenses for both far and near vision with a visible line.',
+    },
+    {
+        id: 3,
+        name: 'Progressive Lenses',
+        description: 'Advanced no-line lenses for clear vision at all distances.',
+    },
+    {
+        id: 4,
+        name: 'Blue Cut Lenses',
+        description: 'Specially made to protect your eyes from mobile and computer screens.',
+    },
+    {
+        id: 5,
+        name: 'Photochromatic Lenses',
+        description: 'Auto-darkening lenses that turn into sunglasses in the sun.',
+    },
+    {
+        id: 6,
+        name: 'Anti-Glare Lenses',
+        description: 'Reduces reflections for better vision while driving at night.',
+    }
+];
+
 // Re-export images for components to use
-export { optoHeroImg, storeHeroImg };
+export { optoHeroImg, storeHeroImg, fashionHeroImg };
+
+export const heroSlides = [
+    {
+        id: 1,
+        title: "Clear",
+        subtitle: "Vision For You.",
+        description: "Looking for the perfect glasses? Get expert eye testing and the most stylish frames all in one place.",
+        image: optoHeroImg,
+        badge: "No. 1 Optical Showroom in Srikakulam"
+    },
+    {
+        id: 2,
+        title: "Modern",
+        subtitle: "Luxury Store.",
+        description: "Step into our world-class optical boutique and experience the future of eyewear selection.",
+        image: storeHeroImg,
+        badge: "Premium Experience"
+    },
+    {
+        id: 3,
+        title: "Latest",
+        subtitle: "Global Styles.",
+        description: "Carry the look of the season with our curated collection of international designer frames.",
+        image: fashionHeroImg,
+        badge: "New Collection"
+    }
+];
